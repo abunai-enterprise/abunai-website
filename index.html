@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="sw">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Abunai Enterprise</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+    body {
+      background-color: #f9f9f9;
+      color: #333;
+    }
+    header {
+      background-color: #2f4f4f;
+      color: white;
+      padding: 20px 40px;
+      text-align: center;
+    }
+    nav {
+      background-color: #444;
+      padding: 10px 40px;
+      display: flex;
+      justify-content: center;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .hero {
+      padding: 60px 40px;
+      background: linear-gradient(to right, #f0f0f0, #ffffff);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+    .hero-text {
+      flex: 1;
+      max-width: 500px;
+    }
+    .hero-text h1 {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+    .hero-text p {
+      font-size: 18px;
+      line-height: 1.6;
+    }
+    .slideshow {
+      flex: 1;
+      max-width: 500px;
+      height: 300px;
+      position: relative;
+      overflow: hidden;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
+    .slide {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+    }
+    .slide.active {
+      opacity: 1;
+    }
+    section {
+      padding: 40px;
+    }
+    .product-list {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+    .product {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      width: 300px;
+    }
+    .product h3 {
+      margin-bottom: 10px;
+    }
+    footer {
+      background-color: #2f4f4f;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Abunai Enterprise</h1>
+  <p>Uuzaji wa nafaka kwa bei nafuu - Mchele, Maharage, Mahindi</p>
+</header>
+
+<nav>
+  <a href="index">Nyumbani</a> <br>
+  <a href="#kuhusu">Kuhusu</a>
+  <a href="#bidhaa">Bidhaa</a>
+  <a href="#oda">Oda</a>
+  <a href="#matangazo">Matangazo</a>
+  <a href="#mawasiliano">Mawasiliano</a>
+</nav>
+
+<div class="hero">
+  <div class="hero-text">
+    <h1>Karibu Abunai Enterprise</h1>
+    <p>Tunakuwezesha kupata nafaka bora kwa bei nafuu. Agiza mchele, maharage, au mahindi sasa na ufurahie ubora kwa gharama nafuu kabisa.</p>
+  </div>
+  <div class="slideshow">
+    <img src="mchele1.jpeg" class="slide active" alt="Mchele 1">
+    <img src="mchele2.jpeg" class="slide" alt="Mchele 2">
+    <img src="mchele3.jpeg" class="slide" alt="Mchele 3">
+  </div>
+</div>
+
+<section id="bidhaa">
+  <h2>Bidhaa Zetu</h2>
+  <div class="product-list">
+    <div class="product">
+      <h3>Mchele</h3>
+      <p>Mchele wa Mbeya, unaofaa kwa matumizi ya familia na biashara. Bei: TZS 2,800/kg</p>
+      <img src="mchele1.jpeg" alt="Mchele 1">
+    </div>
+    <div class="product">
+      <h3>Maharage</h3>
+      <p>Maharage ya mlimani yenye protini nyingi. Bei: TZS 2,500/kg</p>
+    </div>
+    <div class="product">
+      <h3>Mahindi</h3>
+      <p>Mahindi bora kwa unga au matumizi mengine. Bei: TZS 1,800/kg</p>
+    </div>
+    <div class="product">
+      <h3>Karanga (Peanuts)</h3>
+      <p>Karanga (Peanuts) bora zilizokaushwa vizuri. Bei: TZS 3,500/kg</p>
+    </div>
+    <div class="product">
+      <h3>Mtama (Sorghum)</h3>
+      <p>Mtama (Sorghum) bora Hutumika kwa uji nadona. Bei: TZS 2,000/kg</p>
+    </div>
+    <div class="product">
+      <h3>Jungu Mawe</h3>
+      <p>Jungu Mawe Mbegu ngumu, lishe ya nguvu. Bei: TZS 5,000/kg</p>
+    </div>
+  </div>
+</section>
+
+<section id="oda">
+  <h2>Fomu ya Kuagiza</h2>
+  <form>
+    <label>Jina lako:<br><input type="text" required></label><br><br>
+    <label>Bidhaa:<br><select>
+      <option value="mchele">Mchele</option>
+      <option value="maharage">Maharage</option>
+      <option value="mahindi">Mahindi</option>
+    </select></label><br><br>
+    <label>Kiasi (kg):<br><input type="number" required></label><br><br>
+    <label>Anwani ya kuwasilisha:<br><textarea rows="4" required></textarea></label><br><br>
+    <button type="submit">Tuma Oda</button>
+  </form>
+</section>
+
+<section id="matangazo">
+  <h2>Matangazo</h2>
+  <ul>
+    <li>🎉 Nunua kilo 50 za mchele upate kilo 2 bure!</li>
+    <li>🆕 Maharage mapya kutoka Kagera sasa yapo sokoni!</li>
+    <li>💳 Tunapokea malipo kwa M-Pesa na Tigo Pesa</li>
+  </ul>
+</section>
+
+<section id="mawasiliano">
+  <h2>Wasiliana Nasi</h2>
+  <p>📞 Simu: +255 757 064 865</p>
+  <p>📧 Barua Pepe: abunaienterprise@gmail.com</p>
+  <p>📍 Musoma, Mara - Tanzania</p>
+</section>
+
+<footer>
+  <p>&copy; 2025 Abunai Enterprise - Haki Zote Zimehifadhiwa</p>
+</footer>
+
+<script>
+  const slides = document.querySelectorAll('.slide');
+  let index = 0;
+  setInterval(() => {
+    slides[index].classList.remove('active');
+    index = (index + 1) % slides.length;
+    slides[index].classList.add('active');
+  }, 3000);
+</script>
+
+</body>
+</html>
